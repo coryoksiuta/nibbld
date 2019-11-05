@@ -18,3 +18,20 @@ require("channels")
 
 // Load the materialize JS from the gem.
 <%= File.read(File.join(Gem.loaded_specs['materialize-sass'].full_gem_path, 'assets', 'javascripts', 'materialize.js')) %>
+
+// Document ready function
+function docReady(fn) {
+    // see if DOM is already available
+    if (document.readyState === "complete" || document.readyState === "interactive") {
+        // call on next available tick
+        setTimeout(fn, 1);
+    } else {
+        document.addEventListener("DOMContentLoaded", fn);
+    }
+
+}
+
+// Initialize materialize
+docReady(function() {
+    M.AutoInit();
+});
