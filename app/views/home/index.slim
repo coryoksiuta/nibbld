@@ -1,2 +1,25 @@
 h1 Home#index
 p Find me in app/views/home/index.html.erb
+
+= link_to "Sign Out", destroy_user_session_path, method: :delete
+
+ul.collapsible
+  li
+    .collapsible-header
+      i.material-icons filter_drama
+      | First
+    .collapsible-body
+      span Lorem ipsum dolor sit amet.
+  li
+    .collapsible-header
+      i.material-icons place
+      | Second
+    .collapsible-body
+      span Lorem ipsum dolor sit amet.
+  li
+    .collapsible-header
+      i.material-icons whatshot
+      | Third
+    .collapsible-body
+      span Lorem ipsum dolor sit amet.
+

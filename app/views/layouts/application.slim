@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title Slim Examples
+    title Nibbld
     = csrf_meta_tags
     = csp_meta_tag
 
@@ -9,4 +9,6 @@ html
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
 
   body
+    p.notice= notice
+    p.alert= alert
     = yield

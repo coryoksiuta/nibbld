@@ -25,6 +25,12 @@ gem 'jbuilder', '~> 2.7'
 # Templating language
 gem 'slim'
 
+# Authenticationg
+gem 'devise'
+
+# Front end styling framework
+gem 'materialize-sass', '~> 1.0.0'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
@@ -45,6 +51,8 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  # https://github.com/ctran/annotate_models
+  gem 'annotate'
 end
 
 group :test do
