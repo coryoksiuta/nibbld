@@ -1,0 +1,29 @@
+.row
+  .col.s12.l6.offset-l3
+    = render "shared/alerts"
+
+    h2 Log in
+
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      .field
+        = f.label :email
+        br
+        = f.email_field :email, autofocus: true, autocomplete: "email"
+
+      .field
+        = f.label :password
+        br
+        = f.password_field :password, autocomplete: "current-password"
+
+      - if devise_mapping.rememberable?
+        .field
+          = f.label :remember_me do
+            = f.check_box :remember_me, class: "filled-in"
+            span Remember me
+
+      .actions.mt2.mb2
+        button.btn.waves-effect.waves-light type="submit" name="action"
+          | Log in
+          i.material-icons.right send
+
+    = render "devise/shared/links"

@@ -1,0 +1,6 @@
+- flash.each do |k, v|
+  .row.alert
+    .col.s12
+      .card class="#{ k == 'alert' ? 'red darken-2' : 'yellow darken-2'}"
+        .card-content.white-text
+          = raw v

@@ -1,0 +1,31 @@
+$extras: (
+    '0_5' : 0.5rem,
+);
+
+@for $i from 0 through 4 {
+  .mt#{$i} { margin-top: #{$i}rem; }
+  .mb#{$i} { margin-bottom: #{$i}rem; }
+  .ml#{$i} { margin-left: #{$i}rem; }
+  .mr#{$i} { margin-right: #{$i}rem; }
+}
+
+@each $extraName, $extraSize in $extras {
+  .mt#{$extraName} { margin-top: $extraSize; }
+  .mb#{$extraName} { margin-bottom: $extraSize; }
+  .ml#{$extraName} { margin-left: $extraSize; }
+  .mr#{$extraName} { margin-right: $extraSize; }
+}
+
+@for $i from 0 through 4 {
+  .pt#{$i} { padding-top: #{$i}rem; }
+  .pb#{$i} { padding-bottom: #{$i}rem; }
+  .pl#{$i} { padding-left: #{$i}rem; }
+  .pr#{$i} { padding-right: #{$i}rem; }
+}
+
+@each $extraName, $extraSize in $extras {
+  .pt#{$extraName} { padding-top: $extraSize; }
+  .pb#{$extraName} { padding-bottom: $extraSize; }
+  .pl#{$extraName} { padding-left: $extraSize; }
+  .pr#{$extraName} { padding-right: $extraSize; }
+}
